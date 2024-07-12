@@ -1,0 +1,258 @@
+/* Reset some basic elements for consistency */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Set a cool background and base styles for the body */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Style the chat app container */
+.chat-app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header style with gradient background */
+.chat-header {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+}
+
+.chat-header a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chat-header a:hover {
+    color: #c3cfe2;
+}
+
+/* Chat container with flex layout */
+.chat-container {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Sidebar for groups */
+.groups {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    background: #f5f7fa;
+    height: calc(100vh - 160px); /* Adjust height based on header and other padding */
+    overflow-y: auto;
+}
+
+.groups button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #4b6cb7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.groups button:hover {
+    background: #182848;
+}
+
+/* Group list styles */
+#groupList {
+    margin-top: 20px;
+}
+
+#groupList h2 {
+    margin-bottom: 10px;
+}
+
+#groups-list {
+    list-style: none;
+    padding: 0;
+}
+
+#groups-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #e9e9e9;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#groups-list li:hover {
+    background: #d1d1d1;
+}
+
+/* Main content area */
+.main-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.group-name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Chat box styles */
+.chat-box {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    overflow-y: auto;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #e9e9e9;
+    border-radius: 4px;
+}
+
+.message strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #4b6cb7;
+}
+
+/* Message input section */
+.message-input {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.message-input button {
+    padding: 10px;
+    background: #4b6cb7;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.message-input button:hover {
+    background: #182848;
+}
+
+/* Users section */
+.users {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+    background: #f5f7fa;
+    height: calc(100vh - 160px); /* Adjust height based on header and other padding */
+    overflow-y: auto;
+}
+
+#users-list {
+    margin-bottom: 20px;
+}
+
+#users-list h2 {
+    margin-bottom: 10px;
+}
+
+#users-list div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #e9e9e9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#users-list button {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#users-list button:hover {
+    background: #d32f2f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        flex-direction: column;
+    }
+
+    .groups {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .users {
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+/* Add some animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.chat-app, .message {
+    animation: fadeIn 0.5s ease-in;
+}
